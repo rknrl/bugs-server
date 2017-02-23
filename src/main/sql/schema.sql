@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS bugs;
+
+CREATE TABLE bugs (
+  id   BIGINT AUTO_INCREMENT,
+  time DATETIME NOT NULL,
+  app  CHAR(64) NOT NULL,
+  bug  TEXT     NOT NULL,
+  text TEXT     NOT NULL,
+  PRIMARY KEY (id)
+)
+  ENGINE = InnoDB
+  CHARSET = utf8;

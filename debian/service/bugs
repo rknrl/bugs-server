@@ -1,0 +1,15 @@
+#!/bin/bash
+
+case $1 in
+    start)
+        su bugs bash -c /usr/local/bin/bugs-start
+    ;;
+    stop)
+        su bugs bash -c /usr/local/bin/bugs-stop
+    ;;
+    restart)
+        su bugs bash -c /usr/local/bin/bugs-stop
+        su bugs bash -c /usr/local/bin/bugs-start
+    ;;
+esac
+exit 0

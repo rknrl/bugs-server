@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -f /home/bugs/bugs.pid ]; then
+    echo "Already runned"
+    exit 1
+fi
+
+java -jar -Dlogback.configurationFile=/var/bugs/logback.xml /var/bugs/bugs.jar /var/bugs/config.json &
+echo $! > /home/bugs/bugs.pid
