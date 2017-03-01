@@ -39,7 +39,7 @@ object Client {
   def bugRow(bug: Bug, href: String, same: Long) =
     tr(
       td(makeLink(href, bug.id.toString)) +
-        td(makeLink(href, bug.time.toString)) +
+        td(makeLink(href, bug.time.toString("dd MMM HH:mm:ss"))) +
         td(makeLink(href, bug.bug)) +
         td(makeLink(href, sameLabel(same)))
     )
